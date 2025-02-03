@@ -1,0 +1,1938 @@
+{
+ "geoms": {
+ "geom1_point_overview": {
+ "geom": "point",
+"classed": "geom1_point_overview",
+"aes": {
+ "x": "pred.diff",
+"y": "value",
+"fill": "differentiable",
+"showSelected1": "differentiable" 
+},
+"params": {
+ "na.rm": false,
+"na.rm": false,
+"size":        4,
+"shape":       21,
+"help": "One dot per prediction difference which could be selected.",
+"showSelected": "differentiable",
+"help_showSelected": "differentiable" 
+},
+"types": {
+ "fill": "rgb",
+"y": "numeric",
+"x": "numeric",
+"showSelected1": "logical",
+"PANEL": "factor",
+"group": "character" 
+},
+"chunk_order": [],
+"nest_order": [
+ "showSelected1",
+"PANEL" 
+],
+"subset_order": [
+ "showSelected1",
+"PANEL" 
+],
+"chunks": 1,
+"total": 1 
+},
+"geom2_tallrect_overview": {
+ "geom": "tallrect",
+"classed": "geom2_tallrect_overview",
+"aes": {
+ "key": "key",
+"xmin": "min",
+"xmax": "max",
+"clickSelects.variable": "var",
+"clickSelects.value": "click.val",
+"showSelected.variable": "var",
+"showSelected.value": "show.val" 
+},
+"params": {
+ "na.rm": false,
+"na.rm": false,
+"alpha":      0.5,
+"showSelected": "show.val",
+"clickSelects": "click.val",
+"help_showSelected": "pred.diff",
+"help_clickSelects": "pred.diff" 
+},
+"types": {
+ "xmin": "numeric",
+"xmax": "numeric",
+"key": "character",
+"clickSelects.variable": "character",
+"clickSelects.value": "numeric",
+"showSelected.variable": "character",
+"showSelected.value": "numeric",
+"PANEL": "factor",
+"group": "character" 
+},
+"chunk_order": [],
+"nest_order": [
+ "PANEL",
+"showSelected.variable",
+"showSelected.value" 
+],
+"subset_order": [
+ "PANEL",
+"showSelected.variable" 
+],
+"chunks": 1,
+"total": 1 
+},
+"geom3_tallrect_data": {
+ "geom": "tallrect",
+"classed": "geom3_tallrect_data",
+"aes": {
+ "xmin": "min/1e+06",
+"xmax": "max/1e+06",
+"fill": "annotation" 
+},
+"params": {
+ "na.rm": false,
+"na.rm": false,
+"alpha":      0.5,
+"help": "One rect per label. The negative label (orange/top) generates a false positive if any change-points are predicted inside. The positive label (violet/bottom) generates a false negative if no change-points are predicted inside." 
+},
+"types": {
+ "fill": "rgb",
+"xmin": "numeric",
+"xmax": "numeric",
+"PANEL": "factor",
+"group": "character" 
+},
+"chunk_order": [],
+"nest_order": [
+ "PANEL" 
+],
+"subset_order": [
+ "PANEL" 
+],
+"chunks": 1,
+"total": 1 
+},
+"geom4_point_data": {
+ "geom": "point",
+"classed": "geom4_point_data",
+"aes": {
+ "x": "position/1e+06",
+"y": "logratio" 
+},
+"params": {
+ "na.rm": false,
+"na.rm": false,
+"colour": "#7F7F7F",
+"help": "One dot per data point to segment." 
+},
+"types": {
+ "y": "numeric",
+"x": "numeric",
+"PANEL": "factor",
+"group": "character" 
+},
+"chunk_order": [],
+"nest_order": [
+ "PANEL" 
+],
+"subset_order": [
+ "PANEL" 
+],
+"chunks": 1,
+"total": 1 
+},
+"geom5_tallrect_data": {
+ "geom": "tallrect",
+"classed": "geom5_tallrect_data",
+"aes": {
+ "xmin": "min/1e+06",
+"xmax": "max/1e+06",
+"colour": "error.type",
+"showSelected1": "pred.diff",
+"showSelected2": "roc.point" 
+},
+"params": {
+ "na.rm": false,
+"na.rm": false,
+"size":        5,
+"fill": "transparent",
+"help": "Rect border if predicted change-points generate a label error: grey=correct, red=false positive, blue=false negative.",
+"showSelected": [ "pred.diff", "roc.point" ],
+"help_showSelected": [ "pred.diff", "roc.point" ] 
+},
+"types": {
+ "colour": "character",
+"xmin": "numeric",
+"xmax": "numeric",
+"showSelected1": "numeric",
+"showSelected2": "numeric",
+"PANEL": "factor",
+"group": "character" 
+},
+"chunk_order": [],
+"nest_order": [
+ "showSelected1",
+"showSelected2",
+"PANEL" 
+],
+"subset_order": [
+ "showSelected1",
+"showSelected2",
+"PANEL" 
+],
+"chunks": 1,
+"total": 1 
+},
+"geom6_segment_data": {
+ "geom": "segment",
+"classed": "geom6_segment_data",
+"aes": {
+ "x": "start.pos/1e+06",
+"y": "mean",
+"xend": "end.pos/1e+06",
+"yend": "mean",
+"showSelected1": "pred.diff",
+"showSelected2": "roc.point" 
+},
+"params": {
+ "lineend": "butt",
+"na.rm": false,
+"na.rm": false,
+"size":        3,
+"colour": "#0000FF",
+"help": "Blue segments show predicted mean model.",
+"showSelected": [ "pred.diff", "roc.point" ],
+"help_showSelected": [ "pred.diff", "roc.point" ] 
+},
+"types": {
+ "y": "numeric",
+"yend": "numeric",
+"x": "numeric",
+"xend": "numeric",
+"showSelected1": "numeric",
+"showSelected2": "numeric",
+"PANEL": "factor",
+"group": "character" 
+},
+"chunk_order": [
+ "roc.point" 
+],
+"nest_order": [
+ "showSelected1",
+"PANEL" 
+],
+"subset_order": [
+ "showSelected1",
+"PANEL" 
+],
+"chunks": {
+ "1": 1,
+"2": 2,
+"3": 3,
+"4": 4,
+"5": 5,
+"6": 6,
+"7": 7 
+},
+"total": 7 
+},
+"geom7_vline_data": {
+ "geom": "vline",
+"classed": "geom7_vline_data",
+"aes": {
+ "xintercept": "start.pos/1e+06",
+"showSelected1": "pred.diff",
+"showSelected2": "roc.point" 
+},
+"params": {
+ "na.rm": false,
+"na.rm": false,
+"size":        2,
+"colour": "#0000FF",
+"help": "Blue vertical lines show predicted change-points.",
+"showSelected": [ "pred.diff", "roc.point" ],
+"help_showSelected": [ "pred.diff", "roc.point" ] 
+},
+"types": {
+ "xintercept": "numeric",
+"showSelected1": "numeric",
+"showSelected2": "numeric",
+"PANEL": "factor",
+"group": "character" 
+},
+"chunk_order": [],
+"nest_order": [
+ "showSelected1",
+"showSelected2",
+"PANEL" 
+],
+"subset_order": [
+ "showSelected1",
+"showSelected2",
+"PANEL" 
+],
+"chunks": 1,
+"total": 1 
+},
+"geom8_vline_obsErr": {
+ "geom": "vline",
+"classed": "geom8_vline_obsErr",
+"aes": {
+ "xintercept": "pred.plus.constant",
+"showSelected1": "pred.diff",
+"showSelected2": "roc.point" 
+},
+"params": {
+ "na.rm": false,
+"na.rm": false,
+"help": "Black vertical line shows predicted value, f(x) = -log(penalty).",
+"showSelected": [ "pred.diff", "roc.point" ],
+"help_showSelected": [ "pred.diff", "roc.point" ] 
+},
+"types": {
+ "xintercept": "numeric",
+"showSelected1": "numeric",
+"showSelected2": "numeric",
+"PANEL": "factor",
+"group": "character" 
+},
+"chunk_order": [],
+"nest_order": [
+ "showSelected1",
+"showSelected2",
+"PANEL" 
+],
+"subset_order": [
+ "showSelected1",
+"showSelected2",
+"PANEL" 
+],
+"chunks": 1,
+"total": 1 
+},
+"geom9_segment_obsErr": {
+ "geom": "segment",
+"classed": "geom9_segment_obsErr",
+"aes": {
+ "x": "pos",
+"y": "-Inf",
+"xend": "neg",
+"yend": "-Inf",
+"showSelected1": "pred.diff",
+"showSelected2": "roc.point" 
+},
+"params": {
+ "lineend": "butt",
+"na.rm": false,
+"na.rm": false,
+"help": "Black horizontal segment shows the difference in predicted values, between the two labeled data sequences (panels).",
+"showSelected": [ "pred.diff", "roc.point" ],
+"help_showSelected": [ "pred.diff", "roc.point" ] 
+},
+"types": {
+ "y": "numeric",
+"yend": "numeric",
+"x": "numeric",
+"xend": "numeric",
+"showSelected1": "numeric",
+"showSelected2": "numeric",
+"PANEL": "factor",
+"group": "character" 
+},
+"chunk_order": [],
+"nest_order": [
+ "showSelected1",
+"showSelected2",
+"PANEL" 
+],
+"subset_order": [
+ "showSelected1",
+"showSelected2",
+"PANEL" 
+],
+"chunks": 1,
+"total": 1 
+},
+"geom10_text_obsErr": {
+ "geom": "text",
+"classed": "geom10_text_obsErr",
+"aes": {
+ "x": "neg - 0.1",
+"y": "-0.3",
+"label": "sprintf(\"pred.diff=%.2f\", pred.diff)",
+"showSelected1": "pred.diff",
+"showSelected2": "roc.point" 
+},
+"params": {
+ "parse": false,
+"check_overlap": false,
+"na.rm": false,
+"na.rm": false,
+"help": "Text shows the difference in predicted values, between the two labeled data sequences (panels).",
+"showSelected": [ "pred.diff", "roc.point" ],
+"help_showSelected": [ "pred.diff", "roc.point" ],
+"anchor": "end" 
+},
+"types": {
+ "y": "numeric",
+"x": "numeric",
+"label": "character",
+"showSelected1": "numeric",
+"showSelected2": "numeric",
+"PANEL": "factor",
+"group": "character" 
+},
+"chunk_order": [],
+"nest_order": [
+ "showSelected1",
+"showSelected2",
+"PANEL" 
+],
+"subset_order": [
+ "showSelected1",
+"showSelected2",
+"PANEL" 
+],
+"chunks": 1,
+"total": 1 
+},
+"geom11_segment_obsErr": {
+ "geom": "segment",
+"classed": "geom11_segment_obsErr",
+"aes": {
+ "x": "min.log.lambda",
+"y": "value",
+"xend": "max.log.lambda",
+"yend": "value",
+"colour": "error.type",
+"size": "error.type",
+"showSelected1": "error.type" 
+},
+"params": {
+ "lineend": "butt",
+"na.rm": false,
+"na.rm": false,
+"help": "Blue and red segments show number of label errors, for each data sequence, as a function of predicted value f(x) = -log(penalty).",
+"showSelected": "error.type",
+"help_showSelected": "error.type" 
+},
+"types": {
+ "colour": "rgb",
+"size": "numeric",
+"y": "numeric",
+"yend": "numeric",
+"x": "numeric",
+"xend": "numeric",
+"showSelected1": "character",
+"PANEL": "factor",
+"group": "character" 
+},
+"chunk_order": [],
+"nest_order": [
+ "showSelected1",
+"PANEL" 
+],
+"subset_order": [
+ "showSelected1",
+"PANEL" 
+],
+"chunks": 1,
+"total": 1 
+},
+"geom12_rect_totals": {
+ "geom": "rect",
+"classed": "geom12_rect_totals",
+"aes": {
+ "xmin": "min.thresh",
+"xmax": "max.thresh",
+"ymin": "0",
+"ymax": "min.fp.fn",
+"showSelected1": "pred.diff" 
+},
+"params": {
+ "na.rm": false,
+"na.rm": false,
+"fill": "#7F7F7F",
+"colour": "transparent",
+"alpha":      0.5,
+"help": "Grey rects represent AUM = Area Under Min of False Positive and False Negative rates.",
+"showSelected": "pred.diff",
+"help_showSelected": "pred.diff" 
+},
+"types": {
+ "ymin": "numeric",
+"ymax": "numeric",
+"xmin": "numeric",
+"xmax": "numeric",
+"showSelected1": "numeric",
+"PANEL": "integer",
+"group": "character" 
+},
+"chunk_order": [],
+"nest_order": [
+ "showSelected1" 
+],
+"subset_order": [
+ "showSelected1" 
+],
+"chunks": 1,
+"total": 1 
+},
+"geom13_segment_totals": {
+ "geom": "segment",
+"classed": "geom13_segment_totals",
+"aes": {
+ "x": "min.thresh",
+"y": "value",
+"xend": "max.thresh",
+"yend": "value",
+"colour": "error.type",
+"size": "error.type",
+"showSelected1": "pred.diff",
+"showSelected2": "error.type" 
+},
+"params": {
+ "lineend": "butt",
+"na.rm": false,
+"na.rm": false,
+"showSelected": [ "pred.diff", "error.type" ],
+"help": "Blue/red/black segments show number of label errors, summed over all data sequences, as a function of the selected threshold, or constant c added to predicted values, f(x)+c = -log(penalty)+c.",
+"help_showSelected": [ "pred.diff", "error.type" ] 
+},
+"types": {
+ "colour": "rgb",
+"size": "numeric",
+"y": "numeric",
+"yend": "numeric",
+"x": "numeric",
+"xend": "numeric",
+"showSelected1": "numeric",
+"showSelected2": "character",
+"PANEL": "integer",
+"group": "character" 
+},
+"chunk_order": [],
+"nest_order": [
+ "showSelected1",
+"showSelected2" 
+],
+"subset_order": [
+ "showSelected1",
+"showSelected2" 
+],
+"chunks": 1,
+"total": 1 
+},
+"geom14_vline_totals": {
+ "geom": "vline",
+"classed": "geom14_vline_totals",
+"aes": {
+ "xintercept": "text.constant",
+"showSelected1": "pred.diff",
+"showSelected2": "roc.point" 
+},
+"params": {
+ "na.rm": false,
+"na.rm": false,
+"colour": "#0000FF",
+"alpha":      0.5,
+"showSelected": [ "pred.diff", "roc.point" ],
+"help": "Blue vertical line shows a constant that could be added to predicted values, which corresponds to the selected point on the ROC curve.",
+"help_showSelected": [ "pred.diff", "roc.point" ] 
+},
+"types": {
+ "xintercept": "numeric",
+"showSelected1": "numeric",
+"showSelected2": "numeric",
+"PANEL": "integer",
+"group": "character" 
+},
+"chunk_order": [],
+"nest_order": [
+ "showSelected1",
+"showSelected2" 
+],
+"subset_order": [
+ "showSelected1",
+"showSelected2" 
+],
+"chunks": 1,
+"total": 1 
+},
+"geom15_text_totals": {
+ "geom": "text",
+"classed": "geom15_text_totals",
+"aes": {
+ "x": "text.constant",
+"y": "-0.25",
+"label": "roc.point",
+"showSelected1": "pred.diff" 
+},
+"params": {
+ "parse": false,
+"check_overlap": false,
+"na.rm": false,
+"na.rm": false,
+"size":       15,
+"colour": "#0000FF",
+"showSelected": "pred.diff",
+"help": "One number for each interval of constant label error / point on the ROC curve.",
+"help_showSelected": "pred.diff" 
+},
+"types": {
+ "y": "numeric",
+"x": "numeric",
+"label": "numeric",
+"showSelected1": "numeric",
+"PANEL": "integer",
+"group": "character" 
+},
+"chunk_order": [],
+"nest_order": [
+ "showSelected1" 
+],
+"subset_order": [
+ "showSelected1" 
+],
+"chunks": 1,
+"total": 1 
+},
+"geom16_text_totals": {
+ "geom": "text",
+"classed": "geom16_text_totals",
+"aes": {
+ "x": "-1.5",
+"y": "0.25",
+"label": "sprintf(\"AUM=%.2f\", aum)",
+"showSelected1": "pred.diff" 
+},
+"params": {
+ "parse": false,
+"check_overlap": false,
+"na.rm": false,
+"na.rm": false,
+"help": "Text shows AUM = Area Under Min of False Positive and False Negative rates.",
+"showSelected": "pred.diff",
+"help_showSelected": "pred.diff" 
+},
+"types": {
+ "y": "numeric",
+"x": "numeric",
+"label": "character",
+"showSelected1": "numeric",
+"PANEL": "integer",
+"group": "character" 
+},
+"chunk_order": [],
+"nest_order": [
+ "showSelected1" 
+],
+"subset_order": [
+ "showSelected1" 
+],
+"chunks": 1,
+"total": 1 
+},
+"geom17_tallrect_totals": {
+ "geom": "tallrect",
+"classed": "geom17_tallrect_totals",
+"aes": {
+ "xmin": "min.thresh",
+"xmax": "max.thresh",
+"clickSelects": "roc.point",
+"showSelected1": "pred.diff" 
+},
+"params": {
+ "na.rm": false,
+"na.rm": false,
+"fill": "#0000FF",
+"colour": "transparent",
+"alpha":      0.1,
+"help": "Light grey rect represents interval of constants that could be added to predicted values, to obtain the selected point on the ROC curve.",
+"clickSelects": "roc.point",
+"showSelected": "pred.diff",
+"help_clickSelects": "roc.point",
+"help_showSelected": "pred.diff" 
+},
+"types": {
+ "xmin": "numeric",
+"xmax": "numeric",
+"clickSelects": "numeric",
+"showSelected1": "numeric",
+"PANEL": "integer",
+"group": "character" 
+},
+"chunk_order": [],
+"nest_order": [
+ "showSelected1" 
+],
+"subset_order": [
+ "showSelected1" 
+],
+"chunks": 1,
+"total": 1 
+},
+"geom18_path_roc": {
+ "geom": "path",
+"classed": "geom18_path_roc",
+"aes": {
+ "x": "FPR",
+"y": "TPR",
+"showSelected1": "pred.diff" 
+},
+"params": {
+ "lineend": "butt",
+"linejoin": "round",
+"linemitre":        1,
+"na.rm": false,
+"na.rm": false,
+"help": "Black path represents ROC curve.",
+"showSelected": "pred.diff",
+"help_showSelected": "pred.diff" 
+},
+"types": {
+ "x": "numeric",
+"y": "numeric",
+"showSelected1": "numeric",
+"PANEL": "integer",
+"group": "character" 
+},
+"chunk_order": [],
+"nest_order": [
+ "showSelected1" 
+],
+"subset_order": [
+ "showSelected1" 
+],
+"chunks": 1,
+"total": 1 
+},
+"geom19_text_roc": {
+ "geom": "text",
+"classed": "geom19_text_roc",
+"aes": {
+ "x": "0.5",
+"y": "0.5",
+"label": "paste0(\"AUC=\", auc)",
+"showSelected1": "pred.diff" 
+},
+"params": {
+ "parse": false,
+"check_overlap": false,
+"na.rm": false,
+"na.rm": false,
+"help": "Text shows AUC = Area Under the ROC Curve.",
+"showSelected": "pred.diff",
+"help_showSelected": "pred.diff" 
+},
+"types": {
+ "x": "numeric",
+"y": "numeric",
+"label": "character",
+"showSelected1": "numeric",
+"PANEL": "integer",
+"group": "character" 
+},
+"chunk_order": [],
+"nest_order": [
+ "showSelected1" 
+],
+"subset_order": [
+ "showSelected1" 
+],
+"chunks": 1,
+"total": 1 
+},
+"geom20_point_roc": {
+ "geom": "point",
+"classed": "geom20_point_roc",
+"aes": {
+ "x": "FPR",
+"y": "TPR",
+"showSelected1": "pred.diff",
+"showSelected2": "roc.point" 
+},
+"params": {
+ "na.rm": false,
+"na.rm": false,
+"size":        4,
+"alpha":      0.5,
+"colour": "#0000FF",
+"help": "One blue dot per point on the ROC curve.",
+"showSelected": [ "pred.diff", "roc.point" ],
+"help_showSelected": [ "pred.diff", "roc.point" ] 
+},
+"types": {
+ "x": "numeric",
+"y": "numeric",
+"showSelected1": "numeric",
+"showSelected2": "numeric",
+"PANEL": "integer",
+"group": "character" 
+},
+"chunk_order": [],
+"nest_order": [
+ "showSelected1",
+"showSelected2" 
+],
+"subset_order": [
+ "showSelected1",
+"showSelected2" 
+],
+"chunks": 1,
+"total": 1 
+},
+"geom21_text_roc": {
+ "geom": "text",
+"classed": "geom21_text_roc",
+"aes": {
+ "x": "text.FPR",
+"y": "TPR + 0.01",
+"label": "roc.point",
+"clickSelects": "roc.point",
+"showSelected1": "pred.diff" 
+},
+"params": {
+ "parse": false,
+"check_overlap": false,
+"na.rm": false,
+"na.rm": false,
+"size":       15,
+"colour": "#0000FF",
+"help": "One number per point on the ROC curve, lower numbers for points generated by smaller constants c added to predicted values, f(x)+c = -log(penalty)+c.",
+"showSelected": "pred.diff",
+"clickSelects": "roc.point",
+"help_showSelected": "pred.diff",
+"help_clickSelects": "roc.point" 
+},
+"types": {
+ "x": "numeric",
+"y": "numeric",
+"label": "numeric",
+"clickSelects": "numeric",
+"showSelected1": "numeric",
+"PANEL": "integer",
+"group": "character" 
+},
+"chunk_order": [],
+"nest_order": [
+ "showSelected1" 
+],
+"subset_order": [
+ "showSelected1" 
+],
+"chunks": 1,
+"total": 1 
+} 
+},
+"time": {
+ "variable": "pred.diff",
+"ms":      500,
+"sequence": [ "4", "4.05", "4.1", "4.15", "4.2", "4.25", "4.3", "4.35", "4.4", "4.45", "4.5", "4.55", "4.6", "4.65", "4.66816745440284", "4.7", "4.75", "4.8", "4.84102739939653", "4.85", "4.9", "4.91980750606868", "4.95", "5", "5.05", "5.09266745106238", "5.1", "5.15", "5.16792151301062", "5.2", "5.25", "5.3", "5.35", "5.4", "5.41956156467646", "5.45", "5.46103520669639", "5.5", "5.55", "5.6", "5.63389515169009", "5.65", "5.7", "5.75", "5.8", "5.85", "5.9", "5.95", "5.96078926530417", "6", "6.05", "6.1", "6.15", "6.2", "6.25", "6.3", "6.35", "6.4", "6.45", "6.5" ] 
+},
+"selectors": {
+ "differentiable": {
+ "type": "multiple",
+"legend": true,
+"is.variable.value": false,
+"showSelected": true,
+"selected": [ "TRUE", "FALSE" ],
+"levels": [ "TRUE", "FALSE" ],
+"update": [
+ "geom1_point_overview" 
+] 
+},
+"error.type": {
+ "type": "multiple",
+"legend": true,
+"is.variable.value": false,
+"showSelected": true,
+"selected": [ "FP", "FN", "min(FP,FN)" ],
+"levels": [ "FP", "FN", "min(FP,FN)" ],
+"update": [
+ "geom11_segment_obsErr",
+"geom13_segment_totals" 
+] 
+},
+"pred.diff": {
+ "is.variable.value": false,
+"type": "single",
+"clickSelects": true,
+"showSelected": true,
+"selected": "4",
+"levels": [ "4", "4.05", "4.1", "4.15", "4.2", "4.25", "4.3", "4.35", "4.4", "4.45", "4.5", "4.55", "4.6", "4.65", "4.66816745440284", "4.7", "4.75", "4.8", "4.84102739939653", "4.85", "4.9", "4.91980750606868", "4.95", "5", "5.05", "5.09266745106238", "5.1", "5.15", "5.16792151301062", "5.2", "5.25", "5.3", "5.35", "5.4", "5.41956156467646", "5.45", "5.46103520669639", "5.5", "5.55", "5.6", "5.63389515169009", "5.65", "5.7", "5.75", "5.8", "5.85", "5.9", "5.95", "5.96078926530417", "6", "6.05", "6.1", "6.15", "6.2", "6.25", "6.3", "6.35", "6.4", "6.45", "6.5" ],
+"update": [
+ "geom2_tallrect_overview",
+"geom5_tallrect_data",
+"geom6_segment_data",
+"geom7_vline_data",
+"geom8_vline_obsErr",
+"geom9_segment_obsErr",
+"geom10_text_obsErr",
+"geom12_rect_totals",
+"geom13_segment_totals",
+"geom14_vline_totals",
+"geom15_text_totals",
+"geom16_text_totals",
+"geom17_tallrect_totals",
+"geom18_path_roc",
+"geom19_text_roc",
+"geom20_point_roc",
+"geom21_text_roc" 
+] 
+},
+"roc.point": {
+ "is.variable.value": false,
+"type": "single",
+"showSelected": true,
+"chunks": "roc.point",
+"clickSelects": true,
+"selected": "1",
+"levels": [ "1", "2", "3", "4", "5", "6", "7" ],
+"update": [
+ "geom5_tallrect_data",
+"geom6_segment_data",
+"geom7_vline_data",
+"geom8_vline_obsErr",
+"geom9_segment_obsErr",
+"geom10_text_obsErr",
+"geom14_vline_totals",
+"geom17_tallrect_totals",
+"geom20_point_roc",
+"geom21_text_roc" 
+] 
+} 
+},
+"plots": {
+ "overview": {
+ "panel_margin_lines":        1,
+"legend": {
+ "differentiable": {
+ "guide": "legend",
+"geoms": "point",
+"title": "differentiable",
+"class": "differentiable",
+"selector": "differentiable",
+"is_discrete": true,
+"legend_type": "fill",
+"text_size": "9.6pt",
+"title_size": "12pt",
+"entries": [
+ {
+ "pointfill": "#FFA500",
+"pointshape":       21,
+"pointcolour": "#000000",
+"pointsize":        4,
+"pointstroke":      0.5,
+"label": "FALSE" 
+},
+{
+ "pointfill": "#000000",
+"pointshape":       21,
+"pointcolour": "#000000",
+"pointsize":        4,
+"pointstroke":      0.5,
+"label": "TRUE" 
+} 
+] 
+} 
+},
+"strips": {
+ "right": [
+ "AUC",
+"AUM" 
+],
+"top": [
+ "",
+"" 
+],
+"n": {
+ "top":        1,
+"right":        1 
+} 
+},
+"layout": {
+ "PANEL": [ "1", "2" ],
+"ROW": [ 1, 2 ],
+"COL": [ 1, 1 ],
+"variable": [ "AUC", "AUM" ],
+"SCALE_X": [ 1, 1 ],
+"SCALE_Y": [ 1, 2 ],
+"AXIS_Y": [ true, true ],
+"AXIS_X": [ false, true ],
+"coord_fixed": [ false, false ],
+"width_proportion": [        1,        1 ],
+"height_proportion": [      0.5,      0.5 ] 
+},
+"panel_background": {
+ "fill": "#FFFFFF",
+"colour": "transparent",
+"size":      0.5,
+"linetype":        1 
+},
+"panel_border": {
+ "fill": "transparent",
+"colour": "#7F7F7F",
+"size":      0.5,
+"linetype":        1 
+},
+"grid_major": {
+ "colour": "#E5E5E5",
+"size":      0.2,
+"linetype":        1,
+"lineend": "butt",
+"loc": {
+ "x": [
+ [
+        4,
+     4.5,
+       5,
+     5.5,
+       6,
+     6.5 
+],
+[
+        4,
+     4.5,
+       5,
+     5.5,
+       6,
+     6.5 
+] 
+],
+"y": [
+ [
+        0,
+       1,
+       2 
+],
+[
+        0,
+       1 
+] 
+] 
+} 
+},
+"grid_minor": {
+ "colour": "#FAFAFA",
+"size":      0.5,
+"linetype":        1,
+"lineend": "butt",
+"loc": {
+ "x": [
+ [
+        4,
+    4.25,
+     4.5,
+    4.75,
+       5,
+    5.25,
+     5.5,
+    5.75,
+       6,
+    6.25,
+     6.5 
+],
+[
+        4,
+    4.25,
+     4.5,
+    4.75,
+       5,
+    5.25,
+     5.5,
+    5.75,
+       6,
+    6.25,
+     6.5 
+] 
+],
+"y": [
+ [
+        0,
+     0.5,
+       1,
+     1.5,
+       2 
+],
+[
+        0,
+     0.5,
+       1 
+] 
+] 
+} 
+},
+"axis1": {
+ "x": [
+        4,
+     4.5,
+       5,
+     5.5,
+       6,
+     6.5 
+],
+"xlab": [
+ "4.0",
+"4.5",
+"5.0",
+"5.5",
+"6.0",
+"6.5" 
+],
+"xrange": [    3.875,    6.625 ],
+"xline": false,
+"xticks": true,
+"y": [
+        0,
+       1,
+       2 
+],
+"ylab": [
+ "0",
+"1",
+"2" 
+],
+"yrange": [     -0.1,      2.1 ],
+"yline": false,
+"yticks": true 
+},
+"axis2": {
+ "x": [
+        4,
+     4.5,
+       5,
+     5.5,
+       6,
+     6.5 
+],
+"xlab": [
+ "4.0",
+"4.5",
+"5.0",
+"5.5",
+"6.0",
+"6.5" 
+],
+"xrange": [    3.875,    6.625 ],
+"xline": false,
+"xticks": true,
+"y": [
+        0,
+       1 
+],
+"ylab": [
+ "0",
+"1" 
+],
+"yrange": [ -0.04818554, 1.011896 ],
+"yline": false,
+"yticks": true 
+},
+"xtitle": "Prediction difference, f(neg) - f(pos)",
+"strip_text_xsize": "12pt",
+"xsize": "12pt",
+"xangle":        0,
+"xanchor": "middle",
+"ytitle": "",
+"strip_text_ysize": "12pt",
+"ysize": "12pt",
+"yangle":        0,
+"yanchor": "end",
+"xlabs": [
+ "4.0",
+"4.5",
+"5.0",
+"5.5",
+"6.0",
+"6.5" 
+],
+"ylabs": [
+ "0",
+"1",
+"2" 
+],
+"title": "Overview, select difference",
+"title_size": "14.4pt",
+"options": {
+ "width":      300,
+"height":      300 
+},
+"geoms": [
+ "geom1_point_overview",
+"geom2_tallrect_overview" 
+] 
+},
+"data": {
+ "panel_margin_lines":     0.27,
+"strips": {
+ "right": [
+ "label: neg",
+"label: pos" 
+],
+"top": [
+ "",
+"" 
+],
+"n": {
+ "top":        1,
+"right":        1 
+} 
+},
+"layout": {
+ "PANEL": [ "1", "2" ],
+"ROW": [ 1, 2 ],
+"COL": [ 1, 1 ],
+"label": [ "neg", "pos" ],
+"SCALE_X": [ 1, 1 ],
+"SCALE_Y": [ 1, 1 ],
+"AXIS_Y": [ true, true ],
+"AXIS_X": [ false, true ],
+"coord_fixed": [ false, false ],
+"width_proportion": [        1,        1 ],
+"height_proportion": [      0.5,      0.5 ] 
+},
+"panel_background": {
+ "fill": "#FFFFFF",
+"colour": "transparent",
+"size":      0.5,
+"linetype":        1 
+},
+"panel_border": {
+ "fill": "transparent",
+"colour": "#7F7F7F",
+"size":      0.5,
+"linetype":        1 
+},
+"grid_major": {
+ "colour": "#E5E5E5",
+"size":      0.2,
+"linetype":        1,
+"lineend": "butt",
+"loc": {
+ "x": [
+ [
+        0,
+      50,
+     100,
+     150,
+     200,
+     250 
+],
+[
+        0,
+      50,
+     100,
+     150,
+     200,
+     250 
+] 
+],
+"y": [
+ [
+     -0.5,
+       0,
+     0.5 
+],
+[
+     -0.5,
+       0,
+     0.5 
+] 
+] 
+} 
+},
+"grid_minor": {
+ "colour": "#FAFAFA",
+"size":      0.5,
+"linetype":        1,
+"lineend": "butt",
+"loc": {
+ "x": [
+ [
+        0,
+      25,
+      50,
+      75,
+     100,
+     125,
+     150,
+     175,
+     200,
+     225,
+     250 
+],
+[
+        0,
+      25,
+      50,
+      75,
+     100,
+     125,
+     150,
+     175,
+     200,
+     225,
+     250 
+] 
+],
+"y": [
+ [
+    -0.75,
+    -0.5,
+   -0.25,
+       0,
+    0.25,
+     0.5 
+],
+[
+    -0.75,
+    -0.5,
+   -0.25,
+       0,
+    0.25,
+     0.5 
+] 
+] 
+} 
+},
+"axis1": {
+ "x": [
+        0,
+      50,
+     100,
+     150,
+     200,
+     250 
+],
+"xlab": [
+ "0",
+"50",
+"100",
+"150",
+"200",
+"250" 
+],
+"xrange": [ -12.15946, 255.3486 ],
+"xline": false,
+"xticks": true,
+"y": [
+     -0.5,
+       0,
+     0.5 
+],
+"ylab": [
+ "-0.5",
+"0.0",
+"0.5" 
+],
+"yrange": [ -0.9107971, 0.6101533 ],
+"yline": false,
+"yticks": true 
+},
+"axis2": {
+ "x": [
+        0,
+      50,
+     100,
+     150,
+     200,
+     250 
+],
+"xlab": [
+ "0",
+"50",
+"100",
+"150",
+"200",
+"250" 
+],
+"xrange": [ -12.15946, 255.3486 ],
+"xline": false,
+"xticks": true,
+"y": [
+     -0.5,
+       0,
+     0.5 
+],
+"ylab": [
+ "-0.5",
+"0.0",
+"0.5" 
+],
+"yrange": [ -0.9107971, 0.6101533 ],
+"yline": false,
+"yticks": true 
+},
+"xtitle": "Position on chromosome",
+"strip_text_xsize": "12pt",
+"xsize": "12pt",
+"xangle":        0,
+"xanchor": "middle",
+"ytitle": "DNA copy number (logratio)",
+"strip_text_ysize": "12pt",
+"ysize": "12pt",
+"yangle":        0,
+"yanchor": "end",
+"xlabs": [
+ "0",
+"50",
+"100",
+"150",
+"200",
+"250" 
+],
+"ylabs": [
+ "-0.5",
+"0.0",
+"0.5" 
+],
+"title": "Data, labels, predicted changepoint models",
+"title_size": "14.4pt",
+"options": {
+ "width":      600,
+"height":      300 
+},
+"geoms": [
+ "geom3_tallrect_data",
+"geom4_point_data",
+"geom5_tallrect_data",
+"geom6_segment_data",
+"geom7_vline_data" 
+] 
+},
+"obsErr": {
+ "panel_margin_lines":        0,
+"strips": {
+ "right": [
+ "label: neg",
+"label: pos" 
+],
+"top": [
+ "",
+"" 
+],
+"n": {
+ "top":        1,
+"right":        1 
+} 
+},
+"layout": {
+ "PANEL": [ "1", "2" ],
+"ROW": [ 1, 2 ],
+"COL": [ 1, 1 ],
+"label": [ "neg", "pos" ],
+"SCALE_X": [ 1, 1 ],
+"SCALE_Y": [ 1, 1 ],
+"AXIS_Y": [ true, true ],
+"AXIS_X": [ false, true ],
+"coord_fixed": [ false, false ],
+"width_proportion": [        1,        1 ],
+"height_proportion": [      0.5,      0.5 ] 
+},
+"panel_background": {
+ "fill": "#FFFFFF",
+"colour": "transparent",
+"size":      0.5,
+"linetype":        1 
+},
+"panel_border": {
+ "fill": "transparent",
+"colour": "#7F7F7F",
+"size":      0.5,
+"linetype":        1 
+},
+"grid_major": {
+ "colour": "#E5E5E5",
+"size":      0.2,
+"linetype":        1,
+"lineend": "butt",
+"loc": {
+ "x": [
+ [
+       -2,
+       0,
+       2,
+       4 
+],
+[
+       -2,
+       0,
+       2,
+       4 
+] 
+],
+"y": [
+ [
+        0,
+       1 
+],
+[
+        0,
+       1 
+] 
+] 
+} 
+},
+"grid_minor": {
+ "colour": "#FAFAFA",
+"size":      0.5,
+"linetype":        1,
+"lineend": "butt",
+"loc": {
+ "x": [
+ [
+       -3,
+      -2,
+      -1,
+       0,
+       1,
+       2,
+       3,
+       4,
+       5 
+],
+[
+       -3,
+      -2,
+      -1,
+       0,
+       1,
+       2,
+       3,
+       4,
+       5 
+] 
+],
+"y": [
+ [
+        0,
+     0.5,
+       1 
+],
+[
+        0,
+     0.5,
+       1 
+] 
+] 
+} 
+},
+"axis1": {
+ "x": [
+       -2,
+       0,
+       2,
+       4 
+],
+"xlab": [
+ "-2",
+"0",
+"2",
+"4" 
+],
+"xrange": [ -3.494857, 5.890159 ],
+"xline": false,
+"xticks": true,
+"y": [
+        0,
+       1 
+],
+"ylab": [
+ "0",
+"1" 
+],
+"yrange": [    -0.49,     1.49 ],
+"yline": false,
+"yticks": true 
+},
+"axis2": {
+ "x": [
+       -2,
+       0,
+       2,
+       4 
+],
+"xlab": [
+ "-2",
+"0",
+"2",
+"4" 
+],
+"xrange": [ -3.494857, 5.890159 ],
+"xline": false,
+"xticks": true,
+"y": [
+        0,
+       1 
+],
+"ylab": [
+ "0",
+"1" 
+],
+"yrange": [    -0.49,     1.49 ],
+"yline": false,
+"yticks": true 
+},
+"xtitle": "Predicted value f(x)",
+"strip_text_xsize": "12pt",
+"xsize": "12pt",
+"xangle":        0,
+"xanchor": "middle",
+"ytitle": "Label errors",
+"strip_text_ysize": "12pt",
+"ysize": "12pt",
+"yangle":        0,
+"yanchor": "end",
+"xlabs": [
+ "-2",
+"0",
+"2",
+"4" 
+],
+"ylabs": [
+ "0",
+"1" 
+],
+"title": "Example error functions",
+"title_size": "14.4pt",
+"options": {
+ "width":      300,
+"height":      300 
+},
+"geoms": [
+ "geom8_vline_obsErr",
+"geom9_segment_obsErr",
+"geom10_text_obsErr",
+"geom11_segment_obsErr" 
+] 
+},
+"totals": {
+ "panel_margin_lines":     0.27,
+"legend": {
+ "Error type": {
+ "guide": "legend",
+"geoms": "path",
+"title": "Error type",
+"class": "error.type",
+"selector": "error.type",
+"is_discrete": true,
+"legend_type": [ "colour", "size" ],
+"text_size": "9.6pt",
+"title_size": "12pt",
+"entries": [
+ {
+ "pathcolour": "#00BFFF",
+"pathsize":        4,
+"pathlinetype":        1,
+"label": "FN" 
+},
+{
+ "pathcolour": "#FF0000",
+"pathsize":        6,
+"pathlinetype":        1,
+"label": "FP" 
+},
+{
+ "pathcolour": "#000000",
+"pathsize":        2,
+"pathlinetype":        1,
+"label": "min(FP,FN)" 
+} 
+] 
+} 
+},
+"strips": {
+ "top": [
+ "" 
+],
+"right": [
+ "" 
+],
+"n": {
+ "top":        0,
+"right":        0 
+} 
+},
+"layout": {
+ "PANEL": [ 1 ],
+"ROW": [ 1 ],
+"COL": [ 1 ],
+"SCALE_X": [ 1 ],
+"SCALE_Y": [ 1 ],
+"AXIS_X": [ true ],
+"AXIS_Y": [ true ],
+"coord_fixed": [ false ],
+"width_proportion": [        1 ],
+"height_proportion": [        1 ] 
+},
+"panel_background": {
+ "fill": "#FFFFFF",
+"colour": "transparent",
+"size":      0.5,
+"linetype":        1 
+},
+"panel_border": {
+ "fill": "transparent",
+"colour": "#7F7F7F",
+"size":      0.5,
+"linetype":        1 
+},
+"grid_major": {
+ "colour": "#E5E5E5",
+"size":      0.2,
+"linetype":        1,
+"lineend": "butt",
+"loc": {
+ "x": [
+ [
+       -3,
+      -2,
+      -1,
+       0 
+] 
+],
+"y": [
+ [
+        0,
+       1 
+] 
+] 
+} 
+},
+"grid_minor": {
+ "loc": {
+ "x": [
+ [
+       -3,
+    -2.5,
+      -2,
+    -1.5,
+      -1,
+    -0.5,
+       0 
+] 
+],
+"y": [
+ [
+        0,
+     0.5,
+       1 
+] 
+] 
+} 
+},
+"axis1": {
+ "x": [
+       -3,
+      -2,
+      -1,
+       0 
+],
+"xlab": [
+ "-3",
+"-2",
+"-1",
+"0" 
+],
+"xrange": [ -3.228253, 0.2914765 ],
+"xline": false,
+"xticks": true,
+"y": [
+        0,
+       1 
+],
+"ylab": [
+ "0",
+"1" 
+],
+"yrange": [    -0.49,     1.49 ],
+"yline": false,
+"yticks": true 
+},
+"xtitle": "Constant added to pred. values",
+"strip_text_xsize": "12pt",
+"xsize": "12pt",
+"xangle":        0,
+"xanchor": "middle",
+"ytitle": "Label errors",
+"strip_text_ysize": "12pt",
+"ysize": "12pt",
+"yangle":        0,
+"yanchor": "end",
+"xlabs": [
+ "-3",
+"-2",
+"-1",
+"0" 
+],
+"ylabs": [
+ "0",
+"1" 
+],
+"title": "Total error, select interval",
+"title_size": "14.4pt",
+"options": {
+ "width":      300,
+"height":      300 
+},
+"geoms": [
+ "geom12_rect_totals",
+"geom13_segment_totals",
+"geom14_vline_totals",
+"geom15_text_totals",
+"geom16_text_totals",
+"geom17_tallrect_totals" 
+] 
+},
+"roc": {
+ "panel_margin_lines":     0.27,
+"legend": {},
+"strips": {
+ "top": [
+ "" 
+],
+"right": [
+ "" 
+],
+"n": {
+ "top":        0,
+"right":        0 
+} 
+},
+"layout": {
+ "PANEL": [ 1 ],
+"ROW": [ 1 ],
+"COL": [ 1 ],
+"SCALE_X": [ 1 ],
+"SCALE_Y": [ 1 ],
+"AXIS_X": [ true ],
+"AXIS_Y": [ true ],
+"coord_fixed": [ false ],
+"width_proportion": [        1 ],
+"height_proportion": [        1 ] 
+},
+"panel_background": {
+ "fill": "#FFFFFF",
+"colour": "transparent",
+"size":      0.5,
+"linetype":        1 
+},
+"panel_border": {
+ "fill": "transparent",
+"colour": "#7F7F7F",
+"size":      0.5,
+"linetype":        1 
+},
+"grid_major": {
+ "colour": "#E5E5E5",
+"size":      0.2,
+"linetype":        1,
+"lineend": "butt",
+"loc": {
+ "x": [
+ [
+        0,
+     0.5,
+       1 
+] 
+],
+"y": [
+ [
+        0,
+     0.5,
+       1 
+] 
+] 
+} 
+},
+"grid_minor": {
+ "loc": {
+ "x": [
+ [
+        0,
+    0.25,
+     0.5,
+    0.75,
+       1 
+] 
+],
+"y": [
+ [
+        0,
+    0.25,
+     0.5,
+    0.75,
+       1 
+] 
+] 
+} 
+},
+"axis1": {
+ "x": [
+        0,
+     0.5,
+       1 
+],
+"xlab": [
+ "0.0",
+"0.5",
+"1.0" 
+],
+"xrange": [   -0.056,    1.176 ],
+"xline": false,
+"xticks": true,
+"y": [
+        0,
+     0.5,
+       1 
+],
+"ylab": [
+ "0.0",
+"0.5",
+"1.0" 
+],
+"yrange": [  -0.0505,   1.0605 ],
+"yline": false,
+"yticks": true 
+},
+"xtitle": "False Positive Rate",
+"strip_text_xsize": "12pt",
+"xsize": "12pt",
+"xangle":        0,
+"xanchor": "middle",
+"ytitle": "True Positive Rate",
+"strip_text_ysize": "12pt",
+"ysize": "12pt",
+"yangle":        0,
+"yanchor": "end",
+"xlabs": [
+ "0.0",
+"0.5",
+"1.0" 
+],
+"ylabs": [
+ "0.0",
+"0.5",
+"1.0" 
+],
+"title": "ROC curve, select point",
+"title_size": "14.4pt",
+"options": {
+ "width":      300,
+"height":      300 
+},
+"geoms": [
+ "geom18_path_roc",
+"geom19_text_roc",
+"geom20_point_roc",
+"geom21_text_roc" 
+] 
+} 
+},
+"source": "https://github.com/tdhock/max-generalized-auc/blob/master/figure-aum-convexity-interactive.R",
+"video": "https://vimeo.com/1053132517",
+"title": "Simple non-monotonic ROC curve" 
+}
